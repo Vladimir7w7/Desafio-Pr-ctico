@@ -30,7 +30,28 @@ return (
         onChange= {handleChange1}/><br/>
         <label>Apellidos:</label><br/>
         <input type="text" name="todo" 
-        onChange= {handleChange}/>
+        onChange= {handleChange}/><br/>
+        <label>Sexo:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>DUI:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>Fecha de nacimiento:</label><br/>
+        <input type="date" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>Nacionalidad:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>Dirección:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>Municipio:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
+        <label>Departamento:</label><br/>
+        <input type="text" name="number" 
+        onChange= {handleChange1}/><br/>
         <button onClick={handleClick}>agregar</button>
     </form>
     {
