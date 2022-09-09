@@ -52,7 +52,7 @@ return (
         <label>Departamento:</label><br/>
         <input type="text" name="number" 
         onChange= {handleChange1}/><br/>
-        <button onClick={handleClick}>agregar</button>
+        <button onClick={handleClick}>Registrar</button>
     </form>
     {
         todos.map((value, index) =>
