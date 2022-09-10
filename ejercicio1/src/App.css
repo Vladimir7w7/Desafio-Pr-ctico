@@ -14,6 +14,7 @@ App {
     background-color: #73061f;
     min-height: 100vh;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
@@ -32,8 +33,10 @@ App {
     }
     form input {
     height: 26px;
+    width:300px;
     border-radius: 5%;
-    /* vertical-align: auto; */
+  
+    /*vertical-align: auto; */
     }
     form button {
       cursor: pointer;
@@ -54,11 +57,13 @@ margin: 0;
 }
 .list {
 display: flex;
-margin: 5px;
-flex-direction: row;
+
+margin: 20px;
+
+flex-direction:row;
 align-items: flex-end;
 }
-.btn-delete {
+/*.btn-delete {
 cursor: pointer;
 display: inline-block;
 text-align: center;
@@ -70,3 +75,4 @@ background-color: red;
 height: 30px;
 width: 30px;
 }
+*/

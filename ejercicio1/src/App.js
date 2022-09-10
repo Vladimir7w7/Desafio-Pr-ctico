@@ -5,9 +5,9 @@ const App = () => {
 return (
 <div className="App">
 <div className="App-content">
-<p>
+<h2>
 Datos del Paciente
-</p>
+</h2>
 <Form/>
 </div>
 </div>
