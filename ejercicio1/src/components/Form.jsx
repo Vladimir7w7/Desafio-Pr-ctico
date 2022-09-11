@@ -68,6 +68,16 @@ if(letras.indexOf(tecla) == -1 && !tecla_especial)
 }
 }*/
 //----------------------------------------------------------------------
+/*function mascara(valor) {
+    if (valor.match(/^\d{2}$/) !== null) {
+      return valor + '-';
+    } else if (valor.match(/^\d{2}\-\d{2}$/) !== null) {
+      return valor + '-';
+    }
+    return dui
+}*/
+
+//----------------------------------------------------------------------
 const deleteTodo = indice => {
     const newTodos = [...todos]
     newTodos.splice(indice,1)
@@ -77,16 +87,17 @@ return (
     <>
     <form onSubmit = { e => e.preventDefault()}>
         <label>Nombres:</label><br/>
-        <input type="text" name="nombres" 
+        <input type="text" name="nombres" placeholder="Por ejemplo, Juan"
         onChange= {handleChange0}/><br/>
         <label>Apellidos:</label><br/>
         <input type="text" name="apellidos" 
         onChange= {handleChange1}/><br/>
         <label>Sexo:</label><br/>
-        <input type="text" name="sexo" 
+        <input type="text" name="sexo" placeholder="M(masculino) / F(femenino)"
         onChange= {handleChange2}/><br/>
         <label>DUI:</label><br/>
-        <input type="number" name="dui" 
+        <input type="number" name="dui" placeholder="00000000-0"
+        //onkeyup="this.value=mascara(thisvalue)" maxLength="10"
         onChange= {handleChange3}/><br/>
          <label>Fecha de nacimiento:</label><br/>
         <input type="date" name="fecha" 
