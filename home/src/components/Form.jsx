@@ -32,7 +32,7 @@ return (
     <>
     <form onSubmit = { e => e.preventDefault()}>
       
-    <button onclick="location.href='https://www.facebook.com'">Llévame a otro lado</button>
+   
 
         <button onClick={handleClick0}>Ejercicio 1</button>
     {
