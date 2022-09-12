@@ -1,4 +1,4 @@
-import React, {useState,Component} from 'react';
+import React, {useState} from 'react';
 import Todo from '../components/Todo';
 import Todo1 from '../components/Todo1';
 import Todo2 from '../components/Todo2';
@@ -11,12 +11,10 @@ const Form = () => {
     const [onzas, setOnzas] = useState({})
     const [kilogramos, setKilogramos] = useState({})
     const [gramos, setGramos] = useState({})
-    const [todo, setTodo] = useState({})
     const [todos,setTodos] = useState ([])
     const [todos2,setTodos2] = useState ([])
     const [todos3,setTodos3] = useState ([])
-//const handleChange1 = e => setNumber
-//({[e.target.name]: e.target.value})
+
 const handleChange0 = e => setOnzas
 ({[e.target.name]: e.target.value})
 const handleChange1 = e => setKilogramos
@@ -24,14 +22,7 @@ const handleChange1 = e => setKilogramos
 const handleChange2 = e => setGramos
 ({[e.target.name]: e.target.value})
 
-//const handleClick0 = e => {
-    //if(Object.keys(todo).length === 0 || todo.todo.trim() ==='' || Object.keys(number).length === 0 || number.number.trim() ==='') 
 
-    //{alert ('el campo no puede estar vacio')
- //   return
-//}
-  //  setTodos([...todos, onzas])
-//}
 const handleClick0 = e =>{
     if(Object.keys(onzas).length === 0 || onzas.onzas.trim() ==='')
     {alert ('el campo no puede estar vacio')
@@ -55,39 +46,6 @@ const handleClick2 = e => {
    setTodos3([gramos])
 }
 
-
-//Validacion de letras
-//--------------------------------------------------------------------
-/*function SoloLetras(e)
-{
-key = e.keyCode || e.which;
-tecla = String.fromCharCode(key).toString();
-letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú";
-
-especiales = [8,13];
-tecla_especial = false
-for(var i in especiales) {
-if(key == especiales[i]){
- tecla_especial = true;
- break;
-}
-}
-
-
-if(letras.indexOf(tecla) == -1 && !tecla_especial)
-{
- alert("Ingresar solo letras");
- return false;
-}
-}*/
-//----------------------------------------------------------------------
-
-//----------------------------------------------------------------------
-const deleteTodo = indice => {
-    const newTodos = [...todos]
-    newTodos.splice(indice,1)
-    setTodos(newTodos)
-}
 return (
     <>
     <form onSubmit = { e => e.preventDefault()}>
@@ -131,39 +89,3 @@ return (
 )
 }
 export default Form
-/*export default class App extends Component {
-    state = {
-      dpi_paciente: ""
-    };
-  
-    actualizarState = e => {
-      const esValido = e.target.validity.valid;
-  
-      if (esValido) {
-        this.setState({
-          dpi_paciente: e.target.value
-        });
-      }
-    };
-  
-    render() {
-      const {
-        actualizarState,
-        state: { dpi_paciente }
-      } = this;
-  
-      return (
-        <div className="App">
-          <input
-            type="text"
-            name="dpi_paciente"
-            className="u-full-width"
-            placeholder="DPI"
-            value={dpi_paciente}
-            pattern="[0-9]{0,13}"
-            onChange={actualizarState}
-          />
-        </div>
-      );
-    }
-  }*/

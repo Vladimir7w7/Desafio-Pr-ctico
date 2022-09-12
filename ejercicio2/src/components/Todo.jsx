@@ -1,5 +1,4 @@
 import React from 'react'
-//import onzas from '../components/Form'
 
 const Todo = ({onzas}) => {
     var num1 = onzas
