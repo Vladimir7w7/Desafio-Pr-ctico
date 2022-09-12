@@ -13,8 +13,7 @@ const Form = () => {
     const [departamento, setDepartamento] = useState({})
     const [todo, setTodo] = useState({})
     const [todos,setTodos] = useState ([])
-//const handleChange1 = e => setNumber
-//({[e.target.name]: e.target.value})
+
 const handleChange0 = e => setNombres
 ({[e.target.name]: e.target.value})
 const handleChange1 = e => setApellidos
@@ -34,7 +33,6 @@ const handleChange7 = e => setMunicipio
 const handleChange8 = e => setDepartamento
 ({[e.target.name]: e.target.value})
 const handleClick = e => {
-    //if(Object.keys(todo).length === 0 || todo.todo.trim() ==='' || Object.keys(number).length === 0 || number.number.trim() ==='') 
     if(Object.keys(nombres).length === 0 || nombres.nombres.trim() ===''||Object.keys(apellidos).length === 0 || apellidos.apellidos.trim() ===''
     ||Object.keys(sexo).length === 0 || sexo.sexo.trim() ===''||Object.keys(dui).length === 0 || dui.dui.trim() ===''||Object.keys(direccion).length === 0 || direccion.direccion.trim() ===''
     ||Object.keys(municipio).length === 0 || municipio.municipio.trim() ===''||Object.keys(departamento).length === 0 || departamento.departamento.trim() ===''
@@ -45,37 +43,7 @@ const handleClick = e => {
     setTodos([...todos, todo,nombres,apellidos,sexo,dui,fecha,nacionalidad,direccion,municipio,departamento])
 }
 //Validacion de letras
-//--------------------------------------------------------------------
-/*function SoloLetras(e)
-{
-key = e.keyCode || e.which;
-tecla = String.fromCharCode(key).toString();
-letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú";
 
-especiales = [8,13];
-tecla_especial = false
-for(var i in especiales) {
-if(key == especiales[i]){
- tecla_especial = true;
- break;
-}
-}
-
-if(letras.indexOf(tecla) == -1 && !tecla_especial)
-{
- alert("Ingresar solo letras");
- return false;
-}
-}*/
-//----------------------------------------------------------------------
-/*function mascara(valor) {
-    if (valor.match(/^\d{2}$/) !== null) {
-      return valor + '-';
-    } else if (valor.match(/^\d{2}\-\d{2}$/) !== null) {
-      return valor + '-';
-    }
-    return dui
-}*/
 
 //----------------------------------------------------------------------
 const deleteTodo = indice => {
@@ -90,29 +58,28 @@ return (
         <input type="text" name="nombres" placeholder="Por ejemplo, Juan"
         onChange= {handleChange0}/><br/>
         <label>Apellidos:</label><br/>
-        <input type="text" name="apellidos" 
+        <input type="text" name="apellidos" placeholder="Por ejemplo, López"
         onChange= {handleChange1}/><br/>
         <label>Sexo:</label><br/>
         <input type="text" name="sexo" placeholder="M(masculino) / F(femenino)"
         onChange= {handleChange2}/><br/>
-        <label>DUI:</label><br/>
-        <input type="number" name="dui" placeholder="00000000-0"
-        //onkeyup="this.value=mascara(thisvalue)" maxLength="10"
+        <label>DUI (sin guión):</label><br/>
+        <input type="number" name="dui" placeholder="058811349"
         onChange= {handleChange3}/><br/>
          <label>Fecha de nacimiento:</label><br/>
         <input type="date" name="fecha" 
         onChange= {handleChange4}/><br/>
         <label>Nacionalidad:</label><br/>
-        <input type="text" name="nacionalidad" 
+        <input type="text" name="nacionalidad" placeholder="Salvadoreño"
         onChange= {handleChange5}/><br/>
         <label>Dirección:</label><br/>
-        <input type="text" name="direccion" 
+        <input type="text" name="direccion" placeholder="Calle"
         onChange= {handleChange6}/><br/>
         <label>Municipio:</label><br/>
-        <input type="text" name="municipio" 
+        <input type="text" name="municipio" placeholder="Soyapango"
         onChange= {handleChange7}/><br/>
         <label>Departamento:</label><br/>
-        <input type="text" name="departamento" 
+        <input type="text" name="departamento" placeholder="San Salvador"
         onChange= {handleChange8}/><br/>
         <button onClick={handleClick}>Registrar</button>
     </form>
