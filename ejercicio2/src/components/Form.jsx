@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState,Component} from 'react';
 import Todo from '../components/Todo';
 import Todo1 from '../components/Todo1';
 import Todo2 from '../components/Todo2';
+//--------------------------------------------------------------------------------------------------------------
 
+
+
+//--------------------------------------------------------------------------------------------------------------
 const Form = () => {
     const [onzas, setOnzas] = useState({})
     const [kilogramos, setKilogramos] = useState({})
@@ -69,6 +73,7 @@ if(key == especiales[i]){
 }
 }
 
+
 if(letras.indexOf(tecla) == -1 && !tecla_especial)
 {
  alert("Ingresar solo letras");
@@ -87,7 +92,8 @@ return (
     <>
     <form onSubmit = { e => e.preventDefault()}>
         <label>Libras a Onzas:</label><br/>
-        <input type="number" name="onzas" placeholder="Inserte el valor en Libras"
+        
+        <input type="number" name="onzas" placeholder="Inserte el valor en Libras" 
         onChange= {handleChange0}/><br/>
         <button onClick={handleClick0}>Convertir</button>
     {
@@ -125,3 +131,39 @@ return (
 )
 }
 export default Form
+/*export default class App extends Component {
+    state = {
+      dpi_paciente: ""
+    };
+  
+    actualizarState = e => {
+      const esValido = e.target.validity.valid;
+  
+      if (esValido) {
+        this.setState({
+          dpi_paciente: e.target.value
+        });
+      }
+    };
+  
+    render() {
+      const {
+        actualizarState,
+        state: { dpi_paciente }
+      } = this;
+  
+      return (
+        <div className="App">
+          <input
+            type="text"
+            name="dpi_paciente"
+            className="u-full-width"
+            placeholder="DPI"
+            value={dpi_paciente}
+            pattern="[0-9]{0,13}"
+            onChange={actualizarState}
+          />
+        </div>
+      );
+    }
+  }*/

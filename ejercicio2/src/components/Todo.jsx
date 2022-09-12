@@ -9,9 +9,9 @@ return (
 <>
     <div className="list">
     
-        <h3> {num3}</h3>
+    <h3>{num3 } oz</h3>
   
-        </div>
+    </div>
      
     
 </>
